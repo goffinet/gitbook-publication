@@ -34,7 +34,7 @@ pipeline {
     stage('Publish') {
       steps {
         echo 'Ready to publish'
-        sh 'scp -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null -r /opt/* $DESTPATH/'
+        sh 'scp -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null -r /opt/$EBOOK.* $DESTPATH/'
       }
     }
   }
