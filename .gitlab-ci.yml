@@ -1,0 +1,96 @@
+# This pipeline run two stages Test and Build
+stages:
+  - test
+  - build
+
+image: goffinet/gitbook
+
+# the 'gitbook' job will test the gitbook tools
+gitbook:
+  stage: test
+  script:
+    - 'echo "node version: $(node -v)"'
+    - gitbook -V
+    - calibre --version
+  allow_failure: false
+
+# the 'lint' job will test the markdown syntax
+lint:
+  stage: test
+  script:
+    - 'echo "node version: $(node -v)"'
+    - echo "markdownlint version:" $(markdownlint -V)
+    - markdownlint --config ./markdownlint.json README.md
+    - markdownlint --config ./markdownlint.json *.md
+  allow_failure: true
+
+# the 'html' job will build your document in html format
+html:
+  stage: build
+  dependencies:
+    - gitbook
+    - lint
+  script:
+    - gitbook install # add any requested plugins in book.json
+    - gitbook build . book # html build
+  artifacts:
+    paths:
+      - book
+    expire_in: 1 day
+  only:
+    - master # this job will affect only the 'master' branch the 'html' job will build your document in pdf format
+  allow_failure: false
+
+# the 'pdf' job will build your document in pdf format
+pdf:
+  stage: build
+  dependencies:
+    - gitbook
+    - lint
+  before_script:
+    - mkdir ebooks
+  script:
+    - gitbook install # add any requested plugins in book.json
+    - gitbook pdf . ebooks/${CI_PROJECT_NAME}.pdf # pdf build
+  artifacts:
+    paths:
+      - ebooks/${CI_PROJECT_NAME}.pdf
+    expire_in: 1 day
+  only:
+    - master # this job will affect only the 'master' branch the 'pdf' job will build your document in pdf format
+
+# the 'epub' job will build your document in epub format
+epub:
+  stage: build
+  dependencies:
+    - gitbook
+    - lint
+  before_script:
+    - mkdir ebooks
+  script:
+    - gitbook install # add any requested plugins in book.json
+    - gitbook epub . ebooks/${CI_PROJECT_NAME}.epub # epub build
+  artifacts:
+    paths:
+      - ebooks/${CI_PROJECT_NAME}.epub
+    expire_in: 1 day
+  only:
+    - master # this job will affect only the 'master' branch
+
+# the 'mobi' job will build your document in mobi format
+mobi:
+  stage: build
+  dependencies:
+    - gitbook
+    - lint
+  before_script:
+    - mkdir ebooks
+  script:
+    - gitbook install # add any requested plugins in book.json
+    - gitbook mobi . ebooks/${CI_PROJECT_NAME}.mobi # mobi build
+  artifacts:
+    paths:
+      - ebooks/${CI_PROJECT_NAME}.mobi
+    expire_in: 1 day
+  only:
+    - master # this job will affect only the 'master' branch
