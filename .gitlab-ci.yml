@@ -32,7 +32,7 @@ html:
     - lint
   script:
     - gitbook install # add any requested plugins in book.json
-    - gitbook build . book # html build
+    - gitbook build . public # html build
   artifacts:
     paths:
       - public
