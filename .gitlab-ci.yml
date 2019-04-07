@@ -35,7 +35,7 @@ html:
     - gitbook build . book # html build
   artifacts:
     paths:
-      - book
+      - public
     expire_in: 1 day
   only:
     - master # this job will affect only the 'master' branch the 'html' job will build your document in pdf format
@@ -51,10 +51,10 @@ pdf:
     - mkdir ebooks
   script:
     - gitbook install # add any requested plugins in book.json
-    - gitbook pdf . ebooks/${CI_PROJECT_NAME}.pdf # pdf build
+    - gitbook pdf . public/${CI_PROJECT_NAME}.pdf # pdf build
   artifacts:
     paths:
-      - ebooks/${CI_PROJECT_NAME}.pdf
+      - public/${CI_PROJECT_NAME}.pdf
     expire_in: 1 day
   only:
     - master # this job will affect only the 'master' branch the 'pdf' job will build your document in pdf format
@@ -69,10 +69,10 @@ epub:
     - mkdir ebooks
   script:
     - gitbook install # add any requested plugins in book.json
-    - gitbook epub . ebooks/${CI_PROJECT_NAME}.epub # epub build
+    - gitbook epub . public/${CI_PROJECT_NAME}.epub # epub build
   artifacts:
     paths:
-      - ebooks/${CI_PROJECT_NAME}.epub
+      - public/${CI_PROJECT_NAME}.epub
     expire_in: 1 day
   only:
     - master # this job will affect only the 'master' branch
@@ -87,10 +87,10 @@ mobi:
     - mkdir ebooks
   script:
     - gitbook install # add any requested plugins in book.json
-    - gitbook mobi . ebooks/${CI_PROJECT_NAME}.mobi # mobi build
+    - gitbook mobi . public/${CI_PROJECT_NAME}.mobi # mobi build
   artifacts:
     paths:
-      - ebooks/${CI_PROJECT_NAME}.mobi
+      - public/${CI_PROJECT_NAME}.mobi
     expire_in: 1 day
   only:
     - master # this job will affect only the 'master' branch
