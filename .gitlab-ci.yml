@@ -25,7 +25,7 @@ lint:
   allow_failure: true
 
 # the 'html' job will build your document in html format
-html:
+pages:
   stage: build
   dependencies:
     - gitbook
