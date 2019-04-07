@@ -51,7 +51,7 @@ pdf:
     - mkdir ebooks
   script:
     - gitbook install # add any requested plugins in book.json
-    - gitbook pdf . public/${CI_PROJECT_NAME}.pdf # pdf build
+    - gitbook pdf . ${CI_PROJECT_NAME}.pdf # pdf build
   artifacts:
     paths:
       - public/${CI_PROJECT_NAME}.pdf
@@ -69,7 +69,7 @@ epub:
     - mkdir ebooks
   script:
     - gitbook install # add any requested plugins in book.json
-    - gitbook epub . public/${CI_PROJECT_NAME}.epub # epub build
+    - gitbook epub . ${CI_PROJECT_NAME}.epub # epub build
   artifacts:
     paths:
       - public/${CI_PROJECT_NAME}.epub
@@ -87,7 +87,7 @@ mobi:
     - mkdir ebooks
   script:
     - gitbook install # add any requested plugins in book.json
-    - gitbook mobi . public/${CI_PROJECT_NAME}.mobi # mobi build
+    - gitbook mobi . ${CI_PROJECT_NAME}.mobi # mobi build
   artifacts:
     paths:
       - public/${CI_PROJECT_NAME}.mobi
