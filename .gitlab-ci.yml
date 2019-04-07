@@ -52,7 +52,7 @@ pdf:
     - gitbook pdf . ${CI_PROJECT_NAME}.pdf # pdf build
   artifacts:
     paths:
-      - public/${CI_PROJECT_NAME}.pdf
+      - ${CI_PROJECT_NAME}.pdf
     expire_in: 1 day
   only:
     - master # this job will affect only the 'master' branch the 'pdf' job will build your document in pdf format
@@ -68,7 +68,7 @@ epub:
     - gitbook epub . ${CI_PROJECT_NAME}.epub # epub build
   artifacts:
     paths:
-      - public/${CI_PROJECT_NAME}.epub
+      - ${CI_PROJECT_NAME}.epub
     expire_in: 1 day
   only:
     - master # this job will affect only the 'master' branch
@@ -84,7 +84,7 @@ mobi:
     - gitbook mobi . ${CI_PROJECT_NAME}.mobi # mobi build
   artifacts:
     paths:
-      - public/${CI_PROJECT_NAME}.mobi
+      - ${CI_PROJECT_NAME}.mobi
     expire_in: 1 day
   only:
     - master # this job will affect only the 'master' branch
