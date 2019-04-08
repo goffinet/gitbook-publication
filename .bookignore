@@ -1,3 +1,9 @@
 drafts/
 _book/
 node_modules/
+.git*
+Dockerfile
+Jenkins*
+package.json
+markdownlint.json
+.bookignore

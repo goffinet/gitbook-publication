@@ -105,8 +105,6 @@ pages:
     - pdf
     - mobi
     - epub # We want to specify dependencies in an explicit way, to avoid confusion if there are different build jobs
-  before_script:
-    - pip install awscli # Install the SDK
   script:
     - mkdir .public
     - cp -r book/* .public
