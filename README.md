@@ -8,9 +8,9 @@ Point de départ : [https://gitlab.com/pages/gitbook](https://gitlab.com/pages/g
 
 ## Ebooks
 
-* [<i class="far fa-file-pdf"></i> Support en formation PDF](/gitbook-publication.pdf)
-* [<i class="far fa-file-powerpoint"></i> Support en formation EPUB](/gitbook-publication.epub)
-* [<i class="fas fa-mobile-alt"></i> Support en formation MOBI](/gitbook-publication.mobi)
+* [Support en formation PDF](/gitbook-publication.pdf)
+* [Support en formation EPUB](/gitbook-publication.epub)
+* [Support en formation MOBI](/gitbook-publication.mobi)
 
 ![Superman S symbol](https://upload.wikimedia.org/wikipedia/commons/0/05/Superman_S_symbol.svg)
 
