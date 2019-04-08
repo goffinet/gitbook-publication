@@ -9,7 +9,6 @@ image: goffinet/gitbook:latest
 # the 'gitbook' job will test the gitbook tools
 gitbook:
   stage: test
-  image: registry.gitlab.com/goffinet/gitbook-gitlab:latest
   script:
     - 'echo "node version: $(node -v)"'
     - gitbook -V
