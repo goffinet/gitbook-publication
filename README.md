@@ -13,5 +13,3 @@ Point de départ : [https://gitlab.com/pages/gitbook](https://gitlab.com/pages/g
 * [Support en formation MOBI](/gitbook-publication.mobi)
 
 ![Support](cover_small.jpg)
-
-Source de l'image : [Superman S symbol](https://commons.wikimedia.org/wiki/File:Superman_S_symbol.svg)
