@@ -1,5 +1,5 @@
 {
-    "title": "Hyper-V et PowerShell",
+    "title": "Modèle de publication GitBook",
     "author": "François-Emmanuel Goffinet",
     "plugins": [
         "ga",
@@ -24,7 +24,7 @@
         },
         "meta": {
             "name": "keywords",
-            "content": "hyper-v, powershell",
+            "content": "gitbook, gitlab, netlify, template",
             "data": ""
         },
         "include-codeblock": {
