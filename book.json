@@ -22,11 +22,6 @@
         "sitemap": {
             "hostname": "https://goffinet.gitlab.io/gitbook-publication/"
         },
-        "meta": {
-            "name": "keywords",
-            "content": "gitbook, gitlab, netlify, template",
-            "data": ""
-        },
         "include-codeblock": {
             "check": false,
             "edit": false,
