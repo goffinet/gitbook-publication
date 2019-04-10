@@ -1,35 +1,35 @@
 {
-  "name": "gitbook-publication",
+  "name": "hyper-v_et_powershell",
   "version": "1.0.0",
-  "description": "AWS 11-2018",
+  "description": "",
   "main": "index.js",
   "dependencies": {
+    "gitbook": "^3.2.3",
+    "gitbook-cli": "^2.3.2",
+    "gitbook-plugin-ace": "^0.3.2",
     "gitbook-plugin-atoc": "^1.0.3",
-    "gitbook-plugin-google-drive-video": "^1.0.4",
+    "gitbook-plugin-ga": "^1.0.1",
+    "gitbook-plugin-gist": "^1.0.0",
     "gitbook-plugin-hints": "^1.0.2",
-    "gitbook-plugin-image-captions": "^3.1.0",
+    "gitbook-plugin-include": "^0.1.0",
     "gitbook-plugin-livereload": "^0.0.1",
-    "gitbook-plugin-katex": "^1.1.4",
-    "gitbook-plugin-search-plus": "^1.0.3"
+    "gitbook-plugin-include-codeblock": "^3.2.2",
+    "gitbook-plugin-redirect": "^0.0.7",
+    "gitbook-plugin-search-plus": "^1.0.3",
+    "gitbook-plugin-sitemap": "^1.2.0"
   },
-  "devDependencies": {
-    "gitbook-cli": "^2.3.0"
-  },
+  "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/goffinet/gitbook-publication.git"
+    "url": "git+https://github.com/goffinet/hyper-v_et_powershell.git"
   },
-  "keywords": [
-    "ansible",
-    "network-automation"
-  ],
-  "author": "Francois-Emmanuel GOFFINET",
+  "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/goffinet/gitbook-publication/issues"
+    "url": "https://github.com/goffinet/hyper-v_et_powershell/issues"
   },
-  "homepage": "https://github.com/goffinet/gitbook-publication#readme"
+  "homepage": "https://github.com/goffinet/hyper-v_et_powershell#readme"
 }

@@ -1,17 +1,42 @@
 {
-    "title": "TITLE",
-    "description": "DESCRIPTION",
-    "author": "AUTHOR_NAME",
-    "language": "fr",
+    "title": "Hyper-V et PowerShell",
+    "author": "François-Emmanuel Goffinet",
     "plugins": [
+        "ga",
+        "sitemap",
         "atoc",
+        "include",
+        "gist",
+        "include-codeblock",
         "-lunr", "-search", "search-plus",
         "hints",
         "livereload",
-        "katex",
-        "google-drive-video",
-        "image-captions"
+        "ace",
+        "redirect"
     ],
+    "pluginsConfig": {
+        "ga": {
+            "token": "UA-11111111-22",
+            "configuration": "auto"
+        },
+        "sitemap": {
+            "hostname": "https://goffinet.gitlab.io/gitbook-publication/"
+        },
+        "meta": {
+            "name": "keywords",
+            "content": "hyper-v, powershell",
+            "data": ""
+        },
+        "include-codeblock": {
+            "check": false,
+            "edit": false,
+            "lang": "bash",
+            "fixlang": true,
+            "template": "default",
+            "theme": "chrome",
+            "unindent": false
+        }
+    },
     "pdf": {
         "margin": {
             "left": 56,
@@ -25,15 +50,5 @@
         "paperSize": "a4",
         "headerTemplate": "_TITLE_ - _SECTION_",
         "footerTemplate": "_AUTHOR_ - _PAGENUM_"
-    },
-    "pluginsConfig": {
-        "image-captions": {
-            "caption": "Figure _BOOK_IMAGE_NUMBER_ : _CAPTION_"
-
-        }
-    },
-    "variables": {
-       "author": "AUTHOR",
-       "repo": "https://gitub.com/account/repo/tree/master/"
     }
 }
