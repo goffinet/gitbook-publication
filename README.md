@@ -14,4 +14,4 @@ Point de départ : [https://gitlab.com/pages/gitbook](https://gitlab.com/pages/g
 * [Support en formation EPUB](/gitbook-publication.epub)
 * [Support en formation MOBI](/gitbook-publication.mobi)
 
-![Support](cover_small.jpg)
+![Page de garde](cover_small.jpg)
